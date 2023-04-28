@@ -16,10 +16,14 @@ export interface ILocation {
 
 export interface IGeometry {
   type: String;
-  id: number;
 }
 
 export type TCoords = [number, number];
+
+export type TPoint = {
+  x: number,
+  y: number,
+}
 
 export interface INodeGeometry extends IGeometry {
   center: TCoords,

@@ -20,7 +20,7 @@ export default class RNode implements IPart {
     this.color = LOAD_COLORS[avLoad];
     this.x = x;
     this.y = y;
-    this.radius = Math.ceil(radius/3);
+    this.radius = Math.ceil(radius/3.5);
   }
 
   public toSvg() {

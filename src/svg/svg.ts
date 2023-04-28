@@ -1,4 +1,6 @@
+import { ILink } from "src/types/payload";
 import render from "./templates";
+import RLink from "./link";
 
 export interface IPart {
   toSvg(): string;
@@ -16,10 +18,10 @@ export default class RSvg {
 
   private drawBorder() {
     return [
-      render('line', { start: { x: 0, y: 0 }, end: { x: 0, y: 1000 }}),
-      render('line', { start: { x: 0, y: 1000 }, end: { x: 1000, y: 1000 }}),
-      render('line', { start: { x: 1000, y: 1000 }, end: { x: 1000, y: 0 }}),
-      render('line', { start: { x: 1000, y: 0 }, end: { x: 0, y: 0 }}),
+      render('line', { color: '#202020', start: { x: 0, y: 0 }, end: { x: 0, y: 1000 }}),
+      render('line', { color: '#202020', start: { x: 0, y: 1000 }, end: { x: 1000, y: 1000 }}),
+      render('line', { color: '#202020', start: { x: 1000, y: 1000 }, end: { x: 1000, y: 0 }}),
+      render('line', { color: '#202020', start: { x: 1000, y: 0 }, end: { x: 0, y: 0 }}),
     ].join('')
   }
 

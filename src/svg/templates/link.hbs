@@ -1,0 +1,6 @@
+<path
+  id="link_{{id}}_{{i}}"
+  style="fill:{{color}};stroke-width:0.264583"
+  d="M {{start.x}},{{start.y}}
+     L {{#each points}}{{x}},{{y}} {{/each}} 
+     S {{#each quads}}{{s.x}},{{s.y}} {{e.x}},{{e.y}} {{/each}} Z"/>
