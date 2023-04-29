@@ -45,17 +45,11 @@ function prepare(data) {
   let maxX = 0;
   let maxY = 0;
   links.forEach((link) => {
-    link.geometry.coordinates.forEach((coord) => {
-      const [x, y] = coord;
-      if (x < minX) minX = x;
-      if (y < minY) minY = y;
-      if (x < minX) minX = x;
-      if (y < minY) minY = y;
-
-      if (x > maxX) maxX = x;
-      if (y > maxY) maxY = y;
-      if (x > maxX) maxX = x;
-      if (y > maxY) maxY = y;
+    link.geometry.coordinates.forEach(([x, y]) => {
+      minX = Math.min(minX, x)
+      minY = Math.min(minY, y)
+      maxX = Math.max(maxX, x)
+      maxY = Math.max(maxY, y)
     })
   });
   return links.map((link) => {
